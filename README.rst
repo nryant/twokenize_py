@@ -1,6 +1,6 @@
 I. Overview
 ===========
-twokenize_py is a backport of CMU's `Twokenize <https://github.com/brendano/ark-tweet-nlp/blob/master/src/cmu/arktweetnlp/Twokenize.java>` from Java to
+twokenize_py is a backport of CMU's `Twokenize <https://github.com/brendano/ark-tweet-nlp/blob/master/src/cmu/arktweetnlp/Twokenize.java>`_ from Java to
 Python that was written in 2013 to support learning of word embeddings from
 messy online discussion forum data.
 
