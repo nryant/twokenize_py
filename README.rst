@@ -38,7 +38,7 @@ To tokenize a text create a new ``Tokenizer`` instance, then call its
 
 which outputs::
 
-    [u'Think', u'about', u'it', u':', u'"', u'Blood', u'Simple', u'"', u'was', u'the', u'best', u'film', u'of', u'1984', u';', u'"', u'Raising', u'Arizona', u'"', u'was', u'the', u'best', u'film', u'of', u'1987', u';', u'"', u"Miller's", u'Crossing', u'"', u'was', u'the', u'best', u'movie', u'of', u'1990', u';', u'"', u'Barton', u'Fink', u'"', u'was', u'the', u'best', u'movie', u'of', u'1991', u';', u'and', u'"', u'Fargo', u'"', u'was', u'the', u'best', u'movie', u'of', u'1996', u'.']
+    ['Think', 'about', 'it', ':', '"', 'Blood', 'Simple', '"', 'was', 'the', 'best', 'film', 'of', '1984', ';', '"', 'Raising', 'Arizona', '"', 'was', 'the', 'best', 'film', 'of', '1987', ';', '"', u"Miller's", 'Crossing', '"', 'was', 'the', 'best', 'movie', 'of', '1990', ';', '"', 'Barton', 'Fink', '"', 'was', 'the', 'best', 'movie', 'of', '1991', ';', 'and', '"', 'Fargo', '"', 'was', 'the', 'best', 'movie', 'of', '1996', '.']
 
 The onset and offsets in characters of the tokens may be recovered using
 ``twokenize_py.Aligner`` as in the following::
@@ -54,9 +54,9 @@ The onset and offsets in characters of the tokens may be recovered using
 
 which produces::
 
-    (u'Oh', 0, 1)
-    (u'Captain', 3, 9)
-    (u'!', 10, 10)
-    (u'My', 12, 13)
-    (u'Captain', 15, 21)
-    (u'!', 22, 22)
+    ('Oh', 0, 1)
+    ('Captain', 3, 9)
+    ('!', 10, 10)
+    ('My', 12, 13)
+    ('Captain', 15, 21)
+    ('!', 22, 22)
