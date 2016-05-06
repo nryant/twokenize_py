@@ -106,7 +106,7 @@ URL_START2 = (r'(?:\b[A-Za-z\d\.-])+\.' + # Sequences of characters/digits.
              r'(?:[A-Za-z\d]+\.){0,3}' +  # 0-3 additional such groups.
              regex_or(COMMON_TLDS, COMMON_CC_TLDS) + # Top-level domains.
              r'\.' + COMMON_CC_TLDS + '?' +          # Optional second top-level domains.
-             pos_lookahead(r'[\W|$]'));
+             pos_lookahead(r'[\W|$]'))
 URL_BODY = r'([^\.\s<>][^\s<>]*)?' # Perhaps change * to *? for nongreedy?
                                    # but then we fail on https://www.cia.gov/library/publicat.../2187rank.html and the like
 URL_EXTRA_CRAP_BEFORE_END = '%s+?' % regex_or(PUNCT_CHARS, ENTITY)
