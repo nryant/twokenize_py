@@ -25,8 +25,8 @@ To install for all users on Unix/Linux::
     sudo python setup.py install
 
 
-III. Example
-============
+IV. Example
+===========
 To tokenize a text create a new ``Tokenizer`` instance, then call its
 ``tokenize`` method::
 
