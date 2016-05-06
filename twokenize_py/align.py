@@ -36,7 +36,7 @@ class Aligner(object):
         for token in tokens:
             try:
                 token_len = len(token)
-                token_bi = bi + txt[bi:].index(token)
+                token_bi = bi + text[bi:].index(token)
                 token_ei = token_bi + token_len - 1
                 spans.append([token_bi, token_ei])
                 bi = token_ei + 1
