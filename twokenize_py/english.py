@@ -233,7 +233,7 @@ PROTECT_PATTERN = regex_or(*PROTECT)
 #########################################
 WHITESPACE = r'\s+'
 
-EDGE_PUNCT = r"""['"\p{Pi}\p{Pf}\p{Ps}\p{Pe}\p{Po}]"""
+EDGE_PUNCT = r"""['"\p{Pi}\p{Pf}\p{Ps}\p{Pe}\p{So}]"""
 NOT_EDGE_PUNCT = r"""[a-zA-Z0-9]""" # Content characters.
 OFF_EDGE = r"(^|$|:|;|\s|\.|,)" # Colon/semicolon also belong to EDGE_PUNCT
                                 #  (via \p{Po}).
