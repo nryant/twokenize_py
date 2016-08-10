@@ -185,7 +185,7 @@ OTHER_ABBREVS = ['a.m.', 'p.m.', 'u.s.', 'u.s.a.',
 ABBREVS1 = TITLES + STREETS + OTHER_ABBREVS
 ABBREVS = regex_or(*[regexify_abbrev(abbrev) for abbrev in ABBREVS1])
 
-BOUNDARY_NOT_DOT = regex_or('$', r'\s', ur'[“"?!,:;]', ENTITY)
+BOUNDARY_NOT_DOT = regex_or('$', r'\s', r'[“"?!,:;]', ENTITY)
 AA1 = r'(?:[A-Za-z]\.){2,}' + pos_lookahead(BOUNDARY_NOT_DOT)
 AA2 = r'(?:[A-Za-z]\.){1,}[A-Za-z]' + pos_lookahead(BOUNDARY_NOT_DOT)
 
