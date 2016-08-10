@@ -11,7 +11,7 @@ This is a backport of CMU's Twoknizes, which has a colorful history:
     Twitter POS Tagger
 2b) Jason Baldridge and David Snyder ported it to Scala
 3) Brendan bugfixed the Scala port and merged with POS-specific changes for
-   the CMU ARK Twitter POS Tagger  
+   the CMU ARK Twitter POS Tagger
 4) Tobi Owoputi ported it back to Java and added many improvements
 5) I backported it from Java to Python for integration with Python-based
    word embedding training code that needed to be used on a large-scale
@@ -107,8 +107,7 @@ URL_START2 = (r'\b(?:[A-Za-z\d-])+' + # Sequences of characters/digits.
              regex_or(COMMON_TLDS, COMMON_CC_TLDS) + # Top-level domains.
              r'(?:\.' + COMMON_CC_TLDS + ')?' +          # Optional second top-level domains.
              pos_lookahead(r'\W|$'))
-URL_BODY = r'(?:[^\.\s<>][^\s<>]*)?' # Perhaps change * to *? for nongreedy?
-                                   # but then we fail on https://www.cia.gov/library/publicat.../2187rank.html and the like
+URL_BODY = r'(?:[^\.\s<>][^\s<>]*?)?' # Fails on https://www.cia.gov/library/publicat.../2187rank.html and the like.
 URL_EXTRA_CRAP_BEFORE_END = '%s+?' % regex_or(PUNCT_CHARS, ENTITY)
 URL_END = regex_or( r'\.\.+', r'[<>]', r'\s', '$')
 URL = (regex_or(URL_START1, URL_START2) +
@@ -236,7 +235,7 @@ WHITESPACE = r'\s+'
 
 EDGE_PUNCT = r"""['"\p{Pi}\p{Pf}\p{Ps}\p{Pe}\p{Po}]"""
 NOT_EDGE_PUNCT = r"""[a-zA-Z0-9]""" # Content characters.
-OFF_EDGE = r"(^|$|:|;|\s|\.|,)" # Colon/semicolon also belong to EDGE_PUNCT 
+OFF_EDGE = r"(^|$|:|;|\s|\.|,)" # Colon/semicolon also belong to EDGE_PUNCT
                                 #  (via \p{Po}).
 EDGE_PUNCT_LEFT = '%s(%s+)(%s)' % (OFF_EDGE, EDGE_PUNCT, NOT_EDGE_PUNCT)
 EDGE_PUNCT_RIGHT = '(%s)(%s+)%s' % (NOT_EDGE_PUNCT, EDGE_PUNCT, OFF_EDGE)
