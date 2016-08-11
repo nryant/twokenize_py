@@ -180,7 +180,7 @@ STREETS = ['st.', 'dr.', 'ave.', 'blvd.', 'cir.', 'crt.', 'ct.']
 OTHER_ABBREVS = ['a.m.', 'p.m.', 'u.s.', 'u.s.a.',
                  'i.e.', 'e.g.',
                  'a.d.', 'c.e.', 'b.c.', 'b.c.e.',
-                 'd.c.', 'no.']
+                 'd.c.']
 ABBREVS1 = TITLES + STREETS + OTHER_ABBREVS
 ABBREVS = regex_or(*[regexify_abbrev(abbrev) for abbrev in ABBREVS1])
 
