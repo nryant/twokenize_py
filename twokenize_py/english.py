@@ -66,8 +66,8 @@ def optional(r):
 # REGEX PATTERNS FOR PROTECTED SEQUENCES
 #########################################
 # Punctuation.
-PUNCT_CHARS = '''['"“”‘’.。?!…,:;]'''
-PUNCT_SEQ = '''['"“”‘’]+|[.。?!,…]+|[:;]+'''
+PUNCT_CHARS = '''['"“”‘’.。¿?¡!…,:;]'''
+PUNCT_SEQ = '''['"“”‘’]+|[.。¿?¡!,…]+|[:;]+'''
 
 # URLS.
 ENTITY = '&(?:amp|lt|gt|quot);'
